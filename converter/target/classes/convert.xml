@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<mapping-config id="sourceToDestination.1" sourceClass="org.search.bean.converter.DO.Source"
+		destinationClass="org.search.bean.converter.DO.Destination">
+		<property-config sourceFieldName="name"
+			destinationFieldName="name1" processor="org.search.bean.converter.DO.processor.SourceNameProcessor">
+		</property-config>
+		<property-config sourceFieldName="pwd"
+			destinationFieldName="pwd2" processor="org.search.bean.converter.DO.processor.SourcePwdProcessor">
+		</property-config>
+	</mapping-config>
+</config>
