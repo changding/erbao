@@ -2,12 +2,13 @@ package org.search.bean.converter.config;
 
 import java.util.List;
 
-import org.search.bean.converter.config.process.Validator;
+import org.apache.commons.lang3.StringUtils;
+import org.search.bean.converter.config.process.Validable;
 
-public class BeanMappingConfiguration implements Validator{
-	public String id;
-	public String sourceClass;
-	public String destinationClass;
+public class BeanMappingConfiguration implements Validable{
+	private String id;
+	private String sourceClass;
+	private String destinationClass;
 	List<PropertyConfiguration> propList;
 
 	public String getSourceClass() {
@@ -43,8 +44,16 @@ public class BeanMappingConfiguration implements Validator{
 	}
 
 	@Override
-	public boolean isValidate() {
-		return false;
+	public String isValidate() {
+if(StringUtils.isBlank(id)){
+	return "id is blank";
+}else if(StringUtils.isBlank(sourceClass)){
+	return "sourceClass is blank";
+}else if(StringUtils.isBlank(destinationClass)){
+	return "destinationClass is blank ";
+}
+		return null;
 	}
+
 
 }

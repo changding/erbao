@@ -1,17 +1,15 @@
 package org.search.bean.converter.config;
 
-import java.util.List;
-
-
+import org.apache.commons.lang3.StringUtils;
 import org.search.bean.converter.config.process.Processor;
-import org.search.bean.converter.config.process.Validator;
+import org.search.bean.converter.config.process.Validable;
 
 /**
  * @author chad
  * @description 转换属性的对应关系
  *
  */
-public class PropertyConfiguration implements Validator{
+public class PropertyConfiguration implements Validable{
 	private String sourceFieldName;
 	private String destinationFieldName;
 	private Processor processor;
@@ -35,8 +33,14 @@ public class PropertyConfiguration implements Validator{
 		this.processor = processor;
 	}
 	@Override
-	public boolean isValidate() {
-		return false;
-	} 
+	public String isValidate() {
+	if(StringUtils.isBlank(sourceFieldName)){
+		return "sourceFieldName is null";
+	}else if(StringUtils.isBlank(destinationFieldName)){
+		return "destinationFieldName is null";
+	}
+	return StringUtils.EMPTY;
+	}
+
 
 }
