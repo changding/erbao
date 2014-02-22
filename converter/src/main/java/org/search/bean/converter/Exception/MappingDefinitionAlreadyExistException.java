@@ -1,4 +1,4 @@
-package org.search.bean.converter.Exception;
+package org.search.bean.converter.exception;
 
 /**
  * @author chad

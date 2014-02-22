@@ -2,7 +2,7 @@ package org.search.bean.converter.config;
 
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.search.bean.converter.Exception.MappingDefinitionAlreadyExistException;
+import org.search.bean.converter.exception.MappingDefinitionAlreadyExistException;
 
 /**
  * @author chad
