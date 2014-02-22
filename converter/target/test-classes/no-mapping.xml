@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<config>
-	<mapping-config id="sourceToDestination.1" sourceClass="org.search.bean.converter.DO.Source"
-		destinationClass="org.search.bean.converter.DO.Destination">
-	</mapping-config>
-</config>
