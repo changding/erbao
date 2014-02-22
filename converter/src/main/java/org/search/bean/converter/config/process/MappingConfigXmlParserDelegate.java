@@ -14,6 +14,11 @@ import org.search.bean.converter.exception.ParserException;
 import org.search.bean.converter.config.process.Processor;
 import com.google.common.collect.Lists;
 
+/**
+ * @author chad
+ * @description 转换器的解析
+ *
+ */
 public class MappingConfigXmlParserDelegate {
 	public static final String ID = "id";// 唯一码
 	public static final String ROOT_CONFIG = "config";
