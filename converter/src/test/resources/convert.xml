@@ -9,4 +9,13 @@
 			destinationFieldName="pwd2" processor="org.search.bean.converter.DO.processor.SourcePwdProcessor">
 		</property-config>
 	</mapping-config>
+	<mapping-config id="sourceToDestination.2" sourceClass="org.search.bean.converter.DO.Source"
+		destinationClass="org.search.bean.converter.DO.Source1">
+	</mapping-config>
+	<mapping-config id="sourceToDestination.3" sourceClass="org.search.bean.converter.DO.Source"
+		destinationClass="org.search.bean.converter.DO.Source2">
+		<property-config sourceFieldName="pwd"
+			destinationFieldName="pwd1" processor="org.search.bean.converter.DO.processor.SourcePwdProcessor">
+		</property-config>
+	</mapping-config>
 </config>
