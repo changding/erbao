@@ -1,6 +1,6 @@
 package org.search.bean.converter.config.process;
 
-import org.search.bean.converter.Exception.ConvertException;
+import org.search.bean.converter.exception.ConvertException;
 
 /**
  * @author chad

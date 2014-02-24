@@ -34,13 +34,12 @@ public class PropertyConfiguration implements Validable{
 	}
 	@Override
 	public String isValidate() {
-		if(StringUtils.isEmpty(sourceFieldName)){
-			return "sourceFieldName is null";
-		}
-		if(StringUtils.isEmpty(destinationFieldName)){
-			return "destinationFieldName is null";
-		}
-		return StringUtils.EMPTY;
-	} 
+	if(StringUtils.isBlank(sourceFieldName)){
+		return "sourceFieldName is null";
+	}else if(StringUtils.isBlank(destinationFieldName)){
+		return "destinationFieldName is null";
+	}
+	return StringUtils.EMPTY;
+	}
 
 }

@@ -6,15 +6,17 @@ import org.apache.commons.lang3.StringUtils;
 import org.search.bean.converter.config.process.Validable;
 
 
+
 /**
  * @author chad
  * @description 代表一个转换的配置实例
  *
  */
-public class BeanMappingConfiguration implements Validable{
-	public String id;
-	public String sourceClass;
-	public String destinationClass;
+
+public class BeanMappingConfiguration implements Validable {
+	private String id;
+	private String sourceClass;
+	private String destinationClass;
 	List<PropertyConfiguration> propList;
 
 	public String getSourceClass() {
@@ -51,16 +53,15 @@ public class BeanMappingConfiguration implements Validable{
 
 	@Override
 	public String isValidate() {
-		if(StringUtils.isEmpty(id)){
-			return "id is null";
+
+		if (StringUtils.isBlank(id)) {
+			return "id is blank";
+		} else if (StringUtils.isBlank(sourceClass)) {
+			return "sourceClass is blank";
+		} else if (StringUtils.isBlank(destinationClass)) {
+			return "destinationClass is blank ";
 		}
-		if(StringUtils.isEmpty(sourceClass)){
-			return "sourceClass is null";
-		}
-		if(StringUtils.isEmpty(destinationClass)){
-			return "destinationClass is null";
-		}
-		return StringUtils.EMPTY;
+		return null;
 	}
 
 }

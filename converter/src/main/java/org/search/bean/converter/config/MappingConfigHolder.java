@@ -2,7 +2,7 @@ package org.search.bean.converter.config;
 
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.search.bean.converter.Exception.MappingDefinitionAlreadyExistException;
+import org.search.bean.converter.exception.MappingDefinitionAlreadyExistException;
 
 /**
  * @author chad
@@ -19,7 +19,7 @@ public class MappingConfigHolder {
 		return null;
 	}
 	public boolean createMappingDefinition(BeanMappingConfiguration beanMappingConfiguration) {
-		if(mappingDefinitionMap.putIfAbsent(beanMappingConfiguration.getId(), beanMappingConfiguration) == beanMappingConfiguration){
+		if(mappingDefinitionMap.putIfAbsent(beanMappingConfiguration.getId(), beanMappingConfiguration) == null){
 			return true;
 		}
 		throw new MappingDefinitionAlreadyExistException(new RuntimeException(),beanMappingConfiguration.getId() +"is already exist");

@@ -11,10 +11,10 @@ import org.dom4j.Attribute;
 import org.dom4j.Document;
 import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
-import org.search.bean.converter.Exception.ParserException;
 import org.search.bean.converter.config.BeanMappingConfiguration;
 import org.search.bean.converter.config.PropertyConfiguration;
-
+import org.search.bean.converter.exception.ParserException;
+import org.search.bean.converter.config.process.Processor;
 import com.google.common.collect.Lists;
 
 /**
