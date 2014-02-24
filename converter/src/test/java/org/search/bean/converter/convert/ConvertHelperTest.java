@@ -8,6 +8,7 @@ import org.search.bean.converter.DO.Destination;
 import org.search.bean.converter.DO.Source;
 import org.search.bean.converter.DO.Source1;
 import org.search.bean.converter.DO.Source2;
+import org.search.bean.converter.manager.ConvertManager;
 
 import junit.framework.Assert;
 import junit.framework.TestCase;
@@ -18,6 +19,12 @@ import junit.framework.TestCase;
  *
  */
 public class ConvertHelperTest extends TestCase{
+	
+	public void setUp(){
+		ConvertManager cm = new ConvertManager();
+		cm.setInitConfigLocations(initConfigLocations)
+		ConverterHelper.setConverterManager(converterManager)
+	}
 public void test_类型转换_带processor() throws SecurityException, IllegalArgumentException, ConvertException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchFieldException, NoSuchMethodException{
 	Source source = new Source();
 	source.setName("name");
