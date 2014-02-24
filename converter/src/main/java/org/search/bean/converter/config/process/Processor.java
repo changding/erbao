@@ -1,6 +1,6 @@
 package org.search.bean.converter.config.process;
 
-import org.search.bean.converter.ConvertException;
+import org.search.bean.converter.Exception.ConvertException;
 
 /**
  * @author chad
@@ -8,5 +8,5 @@ import org.search.bean.converter.ConvertException;
  *
  */
 public interface Processor {
-public Object process(Object destination)throws ConvertException;
+public <T> T process(Object destination)throws ConvertException;
 }

@@ -5,4 +5,10 @@ public class ParserException extends RuntimeException{
 	public ParserException(String msg){
 		super(msg);
 	}
+	public ParserException(Exception e,String msg){
+		super(msg, e);
+	}
+	public ParserException(Exception e){
+		super(e);
+	}
 }

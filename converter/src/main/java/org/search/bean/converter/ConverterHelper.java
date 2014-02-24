@@ -13,7 +13,7 @@ public class ConverterHelper {
 	 * @return 将目标对象转换为另外一个对象,支持变量名不同和类型不同,区别于BeanUtils和beanCopies
 	 */
 	@SuppressWarnings("unchecked")
-	static <T> T  convert(Object source, Class<T> requiredType){
+	public static <T> T  convert(Object source, Class<T> requiredType,String id){
 		Object destinationObj = null;
 		return (T)destinationObj;
 	}
