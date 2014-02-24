@@ -1,7 +1,5 @@
 package org.search.bean.converter;
 
-import java.io.IOException;
-
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;

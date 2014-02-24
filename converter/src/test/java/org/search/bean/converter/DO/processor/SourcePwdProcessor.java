@@ -6,6 +6,7 @@ import org.search.bean.converter.exception.ConvertException;
 
 public class SourcePwdProcessor implements Processor{
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public Pwd process(Object destination)throws ConvertException {
 		Pwd pwd= null;

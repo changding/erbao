@@ -34,6 +34,7 @@ public class MappingConfigXmlParserDelegate {
 	public static final String DEST_FIELD = "destinationFieldName";
 	public static final String CONVERT_PROCESSOR = "processor";
 
+	@SuppressWarnings("rawtypes")
 	public static List<BeanMappingConfiguration> parse(InputStream is) {
 		List<BeanMappingConfiguration> configList = Lists.newArrayList();
 		SAXReader reader = new SAXReader();
@@ -41,7 +42,6 @@ public class MappingConfigXmlParserDelegate {
 			Document document = reader.read(is);
 			Element elements = document.getRootElement();
 			for (Iterator iter = elements.elementIterator(); iter.hasNext();) {
-
 				BeanMappingConfiguration configuration = new BeanMappingConfiguration();
 				Element element = (Element) iter.next();
 				// ¥¶¿Ì Ù–‘
@@ -86,7 +86,7 @@ public class MappingConfigXmlParserDelegate {
 		}
 		return configList;
 	}
-
+	@SuppressWarnings("rawtypes")
 	private static PropertyConfiguration getPropConf(List attrList) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		PropertyConfiguration pConf = new PropertyConfiguration();
 		for (int i = 0; i < attrList.size(); i++) {

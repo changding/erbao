@@ -55,11 +55,8 @@ public class ConverterHelper {
 			throw new ConvertException("can find id");
 		}
 
-		String sourceName = mappingConfiguration.getSourceClass();
 		String destName = mappingConfiguration.getDestinationClass();
         try{        	
-        	Class<?> sourceClazz = ConverterHelper.class.getClassLoader()
-        	.loadClass(sourceName);
         	Class<?> destClazz = ConverterHelper.class.getClassLoader().loadClass(
         			destName);
         	
